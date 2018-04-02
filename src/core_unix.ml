@@ -345,9 +345,9 @@ module IOVec = struct
   ;;
 
   let max_iovecs =
-    let n64 = sysconf IOV_MAX in
-    if n64 > Int64.of_int Array.max_length then Array.max_length
-    else Int64.to_int_exn n64
+    (* let n64 = sysconf IOV_MAX in *)
+    (* if n64 > Int64.of_int Array.max_length then *) Array.max_length
+    (* else Int64.to_int_exn n64 *)
   ;;
 end
 
